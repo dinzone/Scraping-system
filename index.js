@@ -1,3 +1,6 @@
+// inject environment variables
+require('dotenv').config();
+
 // require dependencies
 const express = require('express');
 

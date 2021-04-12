@@ -19,6 +19,8 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.12.3"
+    "lodash.samplesize": "^4.2.0",
+    "mongoose": "^5.12.3",
+    "poolifier": "^2.0.1"
   }
 }
