@@ -1,3 +1,5 @@
+const { ThreadWorker } = require('poolifier');
+
 const parser = require('./parse.service');
 
 // handle link and parse it
@@ -23,4 +25,5 @@ function handleLinkParse(link) {
     return Object.keys(parsedLinks).map((key) => ({ url: key, html: parsedLinks[key] }));
 }
 
-module.exports = handleLinkParse;
+// make this handler thread worker
+module.exports = new ThreadWorker(handleLinkParse);
